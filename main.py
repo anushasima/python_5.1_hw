@@ -5,7 +5,8 @@ def is_valid_variable_name(name):
     if name in keyword.kwlist:
         return False
 
-    if name.count('_') > 1:
+
+    if name.count('_') == len(name) and len(name) > 1:
         return False
 
     if any(char.isupper() for char in name):
